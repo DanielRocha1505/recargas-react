@@ -1,0 +1,62 @@
+@use '../../assets/styles/variables' as *;
+@use '../../assets/styles/mixins' as *;
+
+.faq-container {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: $Primary-Color;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .p-accordion-header-link {
+    background-color: transparent;
+    border: none;
+
+  }
+  
+  .faq-container h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+  }
+  
+  .p-accordion .p-accordion-header {
+    background-color: $Second-Color;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .p-accordion .p-accordion-header, .p-accordion-header-link:hover {
+    background-color: $Second-Color;
+
+  }
+  
+  .p-accordion .p-accordion-content {
+    padding: 15px;
+    background-color: rgb($Second-Color, 80%);
+    border: none;
+    z-index: -1;
+  }
+  
+  .p-accordion .p-accordion-tab {
+    margin-bottom: 10px;
+  }
+  
+  .p-accordion .p-accordion-header .pi {
+    margin-right: 10px;
+  }
+  
+  .faq-container p {
+    font-size: 1rem;
+    color: $Text-Color;
+    line-height: 1.6;
+    border: none;
+  }
+  

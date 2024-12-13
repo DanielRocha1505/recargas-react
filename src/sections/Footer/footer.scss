@@ -1,0 +1,87 @@
+@use '../../assets/styles/variables' as *;
+@use '../../assets/styles/mixins' as *;
+
+footer {
+    background-color: rgba(255, 255, 255, 0.03);
+    padding: 25px 90px;
+    position: inherit;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    .footer-content {
+        @include flex-align(flex-start, center, row);
+        gap: 180px;
+
+        @include mobile {
+            @include flex-align(flex-start, center, column);
+            gap: 50px;
+        }
+    
+        .left {
+            text-align: left;
+    
+            &-text {
+                width: 325px;
+                font-size: 0.875rem;
+                color: rgb($Second-Color, 35%);
+            }
+    
+            img {
+                width: 89px;
+                margin-bottom: 20px;
+            }
+
+            @include mobile {
+                text-align: center;
+                @include flex-align(flex-start, center, column);
+            }
+        }
+    
+        .center {
+            @include flex-align(center, normal, row);
+            gap: 130px;
+            font-size: 1rem;
+            color: $Text-Color;
+            font-weight: bold;
+            text-align: left;
+    
+            .menu-item {
+                color: rgb($Text-Color, 40%);
+                font-size: 0.75rem;
+                font-weight: normal;
+
+                @include mobile {
+                    font-size: 1rem;
+                    margin: 10px 0;
+                }
+            }
+            
+            @include mobile {
+                @include flex-align(flex-start, normal, row);
+                gap: 40px;
+                font-size: 1.2rem;
+
+                .store {
+                    display: none;
+                }
+            }
+        }
+    }
+    
+    .footer-text {
+        text-align: center;
+        padding: 5px;
+        font-size: 0.875rem;
+        color: rgb($Second-Color, 35%);
+    
+        .footer-text-strong {
+            color: $Second-Color-Strong;
+            font-weight: bold;
+        }
+
+        @include mobile {
+            margin-top: 20px;
+        }
+    }
+}

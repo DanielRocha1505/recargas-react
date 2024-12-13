@@ -1,0 +1,128 @@
+@use '../../assets/styles/variables' as *;
+@use '../../assets/styles/mixins' as *;
+
+.planos {
+  padding: 40px;
+  text-align: center;
+
+  .planos-header {
+    margin-bottom: 30px;
+  }
+
+  .planos-toggle {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .planos-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 45px;
+    margin-top: 70px;
+    color: $Text-Color;
+
+    .plano-card {
+      background-color: rgb($Second-Color, 10%);
+      border: 2px solid $Primary-Color;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 420px;
+      transition: transform 0.3s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      .plan-type-tag {
+        position: absolute;
+        top: -35px;
+        right: -60px;
+        background-color: $Second-Color;
+        color: white;
+        padding: 8px 20px;
+        font-weight: bold;
+        font-size: 1.2rem;
+        transform: rotate(35deg);
+        transform-origin: top left;
+        z-index: 10;
+        text-transform: uppercase;
+      }
+
+      .plan-type-tag.mensal {
+        background-color: $Second-Color;
+      }
+
+      .plan-type-tag.anual {
+        background-color: #28a745;
+      }
+
+      .card-image {
+        width: 100%;
+        height: 80px;
+        overflow: hidden;
+        border-radius: 10px;
+        margin-bottom: 20px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+
+      .card-content {
+        h3 {
+          font-size: 1.5rem;
+          color: $Text-Color;
+          margin-bottom: 10px;
+        }
+
+        .card-prices {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          gap: 15px;
+          margin-bottom: 15px;
+
+          .apenas {
+            color: $Text-Color;
+          }
+
+          .preco {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: $Second-Color;
+          }
+
+          .preco-cartao {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #28a745;
+          }
+        }
+
+        .plans-buttons {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          gap: 10px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.planos-title {
+    font-size: 2rem;
+    color: $Text-Color;
+}

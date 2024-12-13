@@ -1,0 +1,13 @@
+@use '../../assets/styles/variables' as *;
+@use '../../assets/styles/mixins' as *;
+
+.social-icons {
+    .social-list {
+        @include flex-align(right, center);
+        gap: 15px;
+    }
+
+    @include mobile {
+        display: none;
+    }
+}

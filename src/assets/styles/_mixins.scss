@@ -1,0 +1,20 @@
+@mixin mobile {
+    @media (max-width: 767px) {
+      @content;
+    }
+  }
+  
+
+@mixin flex-align(
+    $justify: center, 
+    $align: center,    
+    $direction: row,
+    $wrap: nowrap
+  ) {
+    display: flex;
+    justify-content: $justify; 
+    align-items: $align;      
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+  }
+  

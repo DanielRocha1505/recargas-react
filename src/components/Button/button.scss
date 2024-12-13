@@ -1,0 +1,125 @@
+@use '../../assets/styles/variables' as *;
+@use '../../assets/styles/mixins' as *;
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.btn {
+  font-family: inherit;
+  display: inline-block;
+  width: 12em;
+  padding: 8px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border: 2px solid $Second-Color-Strong;
+  transition: color 0.5s;
+  z-index: 1;
+  font-size: 17px;
+  border-radius: 6px;
+  font-weight: 500;
+  color: $Text-Color;
+  background: transparent;
+
+  &-icon {
+    margin-right: 12px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: $Second-Color;
+    height: 200px;
+    width: 300px;
+    border-radius: 50%;
+    top: 100%;
+    left: 100%;
+    transition: all 1.2s;
+  }
+
+  &:hover {
+    color: $Text-Color;
+
+    &::before {
+      top: -60px;
+      left: -60px;
+    }
+  }
+
+  &:active::before {
+    background: $Primary-Color;
+    transition: background 0s;
+  }
+
+  &.cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    flex-direction: row;
+    position: relative;
+
+    svg {
+      transition: .6s;
+      z-index: 3;
+      height: 20px;
+    }
+
+    span {
+      transition: .5s;
+    }
+
+    &:hover {
+      width: 60px;
+      background-color: rgba(51, 34, 51, 0.815);
+      box-shadow: 20px 20px 96px #bebebe, -20px -20px 96px #ffffff;
+
+      svg {
+        transform: translateX(-5px);
+      }
+
+      span {
+        transform: translateY(70px);
+        font-size: .1rem;
+      }
+    }
+
+    &:active svg {
+      transform: translateX(-10px);
+    }
+  }
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  .quantity-btn {
+    background: transparent;
+    border: 1px solid $Second-Color-Strong;
+    padding: 8px;
+    font-size: 18px;
+    color: $Text-Color;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  .quantity {
+    font-size: 1.2rem;
+    color: $Text-Color;
+  }
+}

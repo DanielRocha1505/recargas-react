@@ -1,0 +1,51 @@
+@use '../../assets/styles/variables' as *;
+@use '../../assets/styles/mixins' as *;
+
+.herobanner {
+    width: 100%;
+    color: $Text-Color;
+    text-align: center;
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-description {
+        font-size: 1.4rem;
+        font-weight: normal;
+    }
+
+    .carrousel {
+        @include mobile {
+            display: none;
+        }
+
+        .carousel-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+      
+            @include mobile {
+              display: none;
+            }
+          }
+      
+          .p-carousel-indicators {
+              margin-top: 20px;
+          }
+      
+          .p-carousel .p-carousel-indicators .p-carousel-indicator.p-highlight button {
+              background-color: $Second-Color;
+          }
+      
+          .p-carousel .p-carousel-indicators .p-carousel-indicator button {
+              border-radius: 50%;
+              width: 20px;
+              height: 20px;
+      
+          }
+
+    }
+    
+  }
+  
