@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import './Button.scss';
+import './button.scss';
 
 const Button = ({ label, onClick, styleType = "primary", icon, variant, width, quantity = 1 }) => {
   const [currentQuantity, setCurrentQuantity] = useState(quantity);
