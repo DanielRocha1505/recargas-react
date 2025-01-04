@@ -5,6 +5,8 @@ import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 import './assets/styles/main.scss';
 import Home from './pages/Home';
+import LoginRegister from './pages/LoginRegister';
+import Dashboard from './pages/Dashboard';
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
       <Router>
         <Routes>
           <Route path='/' element={<Home />} />
+          <Route path='/login' element={<LoginRegister />} />
+          <Route path='/dashboard' element={<Dashboard />} />
         </Routes>
       </Router>
     </>

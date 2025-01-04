@@ -96,30 +96,3 @@
     }
   }
 }
-
-.quantity-controls {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-
-  .quantity-btn {
-    background: transparent;
-    border: 1px solid $Second-Color-Strong;
-    padding: 8px;
-    font-size: 18px;
-    color: $Text-Color;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: transform 0.3s;
-
-    &:hover {
-      transform: scale(1.2);
-    }
-  }
-
-  .quantity {
-    font-size: 1.2rem;
-    color: $Text-Color;
-  }
-}

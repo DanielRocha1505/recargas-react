@@ -5,31 +5,22 @@
     width: 100%;
     color: $Text-Color;
     text-align: center;
-
-    .hero-title {
-        font-size: 2rem;
-    }
-
-    .hero-description {
-        font-size: 1.4rem;
-        font-weight: normal;
-    }
+    border-radius: 16px;
+    margin-top: 130px;
 
     .carrousel {
-        @include mobile {
-            display: none;
-        }
 
         .carousel-image {
             width: 100%;
             height: 100%;
             object-fit: cover;
-      
-            @include mobile {
-              display: none;
-            }
+            border-radius: 16px;
           }
-      
+
+          .p-carousel-items-content {
+            border-radius: 16px;
+          }
+
           .p-carousel-indicators {
               margin-top: 20px;
           }

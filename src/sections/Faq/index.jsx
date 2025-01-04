@@ -4,7 +4,7 @@ import './Faq.scss';
 
 const Faq = () => {
   return (
-    <div className="faq-container" id='faq'>
+    <section className="faq-container" id='faq'>
       <h2>Perguntas Frequentes</h2>
       <Accordion>
         <AccordionTab header="Qual é o horário de funcionamento?">
@@ -20,7 +20,7 @@ const Faq = () => {
           <p>Sim, realizamos entregas para todo o Brasil com diferentes prazos e valores, dependendo da localidade.</p>
         </AccordionTab>
       </Accordion>
-    </div>
+    </section>
   );
 };
 

@@ -13,13 +13,11 @@ const Herobanner = () => {
   ];
 
   return (
-    <div className="container herobanner">
+    <section className="container herobanner" id='herobanner'>
         <div className='carrousel'>
             <Carousel value={images} itemTemplate={(item) => (<img src={item.src} alt={item.alt} className="carousel-image" />)} numVisible={1} circular={true}  autoplay={true}  autoplayInterval={3000}  infiniteLoop={true}  showIndicators={true} />
         </div>
-        <h1 className='hero-title'>Ativa Recargas: A Líder em Vendas de Gift Cards!</h1>
-        <h2 className='hero-description'>Oferecemos as melhores opções de Gift Cards para seus jogos, apps e muito mais, com preços imbatíveis e entrega instantânea!</h2>
-    </div>
+    </section>
   );
 }
 

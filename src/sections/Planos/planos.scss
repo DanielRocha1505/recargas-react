@@ -27,7 +27,7 @@
     .plano-card {
       background-color: rgb($Second-Color, 10%);
       border: 2px solid $Primary-Color;
-      border-radius: 10px;
+      border-radius: 16px;
       padding: 20px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       width: 420px;
@@ -44,6 +44,7 @@
 
       .plan-type-tag {
         position: absolute;
+        border-radius: 16px;
         top: -35px;
         right: -60px;
         background-color: $Second-Color;
@@ -116,6 +117,48 @@
           justify-content: space-between;
           gap: 10px;
           width: 100%;
+
+          .quantity-controls {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-bottom: 10px;
+            margin-top: 20px;
+            gap: 10px;
+
+            .quantity-btn {
+              background-color: $Primary-Color;
+              color: white;
+              border: none;
+              border-radius: 4px;
+              width: 30px;
+              height: 30px;
+              font-size: 1rem;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              cursor: pointer;
+              transition: background-color 0.3s;
+
+              &:hover {
+                background-color: darken($Primary-Color, 10%);
+              }
+            }
+
+            .quantity {
+              font-size: 1.2rem;
+              font-weight: bold;
+              color: $Text-Color;
+              width: 40px;
+              text-align: center;
+            }
+
+            .quantity-wrapper {
+              display: flex;
+              flex-direction: row;
+            }
+          }
         }
       }
     }
@@ -123,6 +166,6 @@
 }
 
 .planos-title {
-    font-size: 2rem;
-    color: $Text-Color;
+  font-size: 2rem;
+  color: $Text-Color;
 }

@@ -1,0 +1,150 @@
+@use '../../assets/styles/variables' as *;
+@use '../../assets/styles/mixins' as *;
+
+.containerAuth {
+  max-width: 100%;
+  margin-top: 120px;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-form-container {
+  padding: 20px;
+  background: transparent;
+  border: $Second-Color solid 1px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba($Second-Color, 0.3);
+  color: $Text-Color;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+
+  .recaptcha-container {
+    margin: 0 auto;
+    margin-bottom: 15px;
+  }
+
+  .btn {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .auth-form {
+    display: flex;
+    flex-direction: column;
+  
+    .form-columns {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 20px;
+    }
+  
+    .column {
+      flex: 1 1 48%;
+      margin-bottom: 20px;
+    }
+  
+    .input-group {
+      margin-bottom: 15px;
+    }
+  
+    .input-group label {
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+  
+    .input-group input {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+      border-radius: 4px;
+      border: 1px solid #ddd;
+    }
+  
+    .error-message {
+      color: red;
+      font-size: 14px;
+    }
+  
+    .toggle-auth {
+      font-size: 14px;
+      text-align: center;
+      cursor: pointer;
+    }
+  
+    .highlight-register {
+      font-weight: bold;
+    }
+  
+    .reset-password-link {
+      text-align: center;
+      font-size: 14px;
+      color: #007bff;
+      cursor: pointer;
+    }
+  
+    .cancel-reset-link {
+      text-align: center;
+      font-size: 14px;
+      color: #007bff;
+      cursor: pointer;
+    }
+  }
+  
+
+  .error-message {
+    color: red;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+
+  .toggle-auth {
+    cursor: pointer;
+    color: $Second-Color-Strong;
+    margin-top: 15px;
+    font-size: 14px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .toggle-auth,
+  .reset-password-link,
+  .cancel-reset-link {
+    cursor: pointer;
+    color: $Second-Color-Strong;
+    margin-top: 15px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .toggle-auth {
+    margin-top: 25px;
+  }
+
+  .reset-password-link {
+    font-size: 14px;
+  }
+
+  .cancel-reset-link {
+    color: $Primary-Color-Light;
+  }
+
+  .highlight-register {
+    color: $Text-Color;
+  }
+}

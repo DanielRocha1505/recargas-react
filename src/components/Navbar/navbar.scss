@@ -29,6 +29,16 @@
     padding: 0;
     margin: 0;
     justify-content: flex-start;
+    z-index: 997;
+
+    .navbar-item.active .navbar-link {
+      color: $Second-Color;
+      font-weight: bold;
+
+      @include mobile {
+        color: $Text-Color;
+      }
+    }
 
     @include mobile {
         display: none;
@@ -39,13 +49,13 @@
 
         &.active {
           display: flex;
-          background-color: $Second-Color;
-          width: 245%;
+          background-color: $Primary-Color;
+          width: 534%;
           gap: 10px;
           position: absolute;
-          top: 50px;
-          left: 0;
-          right: 0;
+          top: 80px;
+          left: -214px;
+
           padding: 20px 0;
           border-radius: 5px;
           box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);

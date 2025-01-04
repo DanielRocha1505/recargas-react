@@ -8,7 +8,7 @@ const NossoContato = () => {
   };
 
   return (
-    <div className="contato-container" id='nosso-contato'>
+    <section className="contato-container" id='nosso-contato'>
       <h2>Entre em Contato Conosco</h2>
       <form className="form" onSubmit={handleSubmit}>
         <div className="flex">
@@ -37,9 +37,10 @@ const NossoContato = () => {
           label="Enviar" 
           onClick={handleSubmit} 
           styleType="primary"
+          width='13em' 
         />
       </form>
-    </div>
+    </section>
   );
 };
 

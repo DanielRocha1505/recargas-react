@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import logoPath from '../../assets/imgs/logo.webp';
 import instagramLogo from '../../assets/imgs/instagramLogo.png';
 import tiktokLogo from '../../assets/imgs/tiktokLogo.png';
@@ -10,20 +11,31 @@ import './header.scss';
 import Button from '../../components/Button';
 
 const Header = () => {
+    const navigate = useNavigate();
+
     const navItems = [
-        { text: 'Inicio', link: '' },
-        { text: 'Planos', link: '#planos' },
-        { text: 'Combos', link: '#combos' },
-        { text: 'Perguntas Frequentes', link: '#faq' },
-        { text: 'Nosso Contato', link: '#nosso-contato' },
-    ];
+        { id: 'herobanner', text: 'Inicio' },
+        { id: 'planos', text: 'Planos' },
+        { id: 'combos', text: 'Combos' },
+        { id: 'faq', text: 'Perguntas Frequentes' },
+        { id: 'nosso-contato', text: 'Nosso Contato' },
+      ];
 
     const socialItems = [
         { icon: instagramLogo, link: '' },
         { icon: tiktokLogo, link: '' },
         { icon: youtubeLogo, link: '' },
         { icon: twitterLogo, link: '' },
-    ]
+    ];
+
+    const handleClientAreaClick = () => {
+        const token = localStorage.getItem('token');
+        if (token) {
+            navigate('/dashboard');
+        } else {
+            navigate('/login');
+        }
+    };
 
     return (
         <header>
@@ -33,12 +45,17 @@ const Header = () => {
                     <Navbar navItems={navItems} />
                 </div>
                 <div className="right">
-                    <Button label="Carrinho" width='9em' icon={faShoppingCart} onClick={() => console.log('Carrinho clicado!')} />
-                    <Button label="Área do Cliente" width='13em' icon={faUser} onClick={() => console.log('Usuário clicado!')} />
+                    <Button label="Carrinho" width='9em' icon={faShoppingCart} onClick={() => navigate('/carrinho')} />
+                    <Button 
+                        label="Área do Cliente" 
+                        width='13em' 
+                        icon={faUser} 
+                        onClick={handleClientAreaClick} 
+                    />
                 </div>
             </div>
         </header>
-    )
-}
+    );
+};
 
 export default Header;

@@ -1,29 +1,38 @@
 @use '../../assets/styles/variables' as *;
 @use '../../assets/styles/mixins' as *;
 
-.header {
-  @include flex-align(space-around, center, row);
-  padding: 36px 90px;
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9997;
+  background-color: $Primary-Color;
 
-  @include mobile {
-    padding: 32px 60px
-  }
+  .header {
+    @include flex-align(space-around, center, row);
+    padding: 36px 90px;
   
-  .left {
-    @include flex-align(flex-start, center, row);
-    gap: 30px;
-
-    .logo {
-      width: 50px;
-    }
-  }
-
-  .right {
-    @include flex-align(flex-end, center, row);
-    gap: 30px;
-
     @include mobile {
-      display: none;
+      padding: 32px 60px
+    }
+    
+    .left {
+      @include flex-align(flex-start, center, row);
+      gap: 30px;
+  
+      .logo {
+        width: 50px;
+      }
+    }
+  
+    .right {
+      @include flex-align(flex-end, center, row);
+      gap: 30px;
+  
+      @include mobile {
+        display: none;
+      }
     }
   }
 }

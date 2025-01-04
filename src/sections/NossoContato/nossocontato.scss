@@ -23,6 +23,7 @@
     padding: 20px;
     border-radius: 10px;
     position: relative;
+    align-items: center;
   }
 
   .message {
@@ -94,7 +95,6 @@
     color: green;
   }
 
-  // Ajustes para telas menores (Mobile)
   @include mobile {
     .form {
       width: 100%;
