@@ -61,24 +61,30 @@ const Planos = ({ cartItems, setCartItems }) => {
     const quantity = quantities[item.id] || 1;
     setCartItems((prevItems) => {
       const itemIndex = prevItems.findIndex((cartItem) => cartItem.id === item.id);
-
+  
+      let updatedItems;
       if (itemIndex !== -1) {
-        const updatedItems = [...prevItems];
+        updatedItems = [...prevItems];
         updatedItems[itemIndex] = {
           ...updatedItems[itemIndex],
           quantity: updatedItems[itemIndex].quantity + quantity,
         };
-        return updatedItems;
       } else {
-        return [...prevItems, { ...item, quantity }];
+        updatedItems = [...prevItems, { ...item, quantity }];
       }
+  
+      // Salvar os itens no localStorage sempre que o carrinho for alterado
+      localStorage.setItem('cartItems', JSON.stringify(updatedItems));
+  
+      return updatedItems;
     });
-
+  
     setQuantities((prevQuantities) => ({
       ...prevQuantities,
       [item.id]: 1,
     }));
   };
+  
 
   const renderButtons = (item) => (
     <div className="quantity-controls">

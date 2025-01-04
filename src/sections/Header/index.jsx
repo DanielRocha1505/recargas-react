@@ -41,7 +41,7 @@ const Header = () => {
         <header>
             <div className="container header">
                 <div className="left">
-                    <img src={logoPath} className='logo' alt="Logo Lotus Group" />
+                    <img src={logoPath} className='logo' alt="Logo Ativa Recargas" />
                     <Navbar navItems={navItems} />
                 </div>
                 <div className="right">

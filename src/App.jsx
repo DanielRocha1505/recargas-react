@@ -6,6 +6,7 @@ import 'primeicons/primeicons.css';
 import './assets/styles/main.scss';
 import Home from './pages/Home';
 import LoginRegister from './pages/LoginRegister';
+import Carrinho from './pages/Carrinho';
 import Dashboard from './pages/Dashboard';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/login' element={<LoginRegister />} />
+          <Route path='/carrinho' element={<Carrinho />} />
           <Route path='/dashboard' element={<Dashboard />} />
         </Routes>
       </Router>

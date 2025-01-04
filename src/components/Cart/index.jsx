@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './cart.scss';
 
 const Cart = ({ items, setCartItems }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   const toggleCart = () => {
     setIsOpen((prev) => !prev);
@@ -76,7 +78,7 @@ const Cart = ({ items, setCartItems }) => {
               )
               .toFixed(2)}
           </h3>
-          <button className="checkout-btn">Finalizar Compra</button>
+          <button className="checkout-btn" onClick={() => navigate('/carrinho')}>Finalizar Compra</button>
         </div>
       </div>
     </div>
